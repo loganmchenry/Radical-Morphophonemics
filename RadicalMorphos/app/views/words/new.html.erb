@@ -1,0 +1,23 @@
+<h1>Suggest a word Pair</h1>
+
+<%= form_with model: @words do |form| %>
+  <div>
+    <%= form.label :'First Word' %><br>
+    <%= form.text_field :word1 %>
+    <% @wordPair.errors.full_messages_for(:word1).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+  </div>
+
+  <div>
+    <%= form.label :'Second Word' %><br>
+    <%= form.text_field :word2 %>
+    <% @wordPair.errors.full_messages_for(:word2).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

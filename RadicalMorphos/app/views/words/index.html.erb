@@ -1,0 +1,53 @@
+<h1>Word Pairs!</h1>
+
+
+<!-- Table Style -->
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+</style>
+
+
+<!-- Table of all the word pairs -->
+<table>
+<body>
+  <% @words.each do |wordPair| %>
+  
+    
+    <tr>
+    <th>
+    <!-- link words to the detail view -->
+    <a href="/words/<%= wordPair.id %>">
+        <%= wordPair.word1 %>
+    </th>
+    <th>
+    <a href="/words/<%= wordPair.id %>">
+        <%= wordPair.word2 %>
+    </th>
+    </tr>
+    
+   
+    
+  <% end %>
+  </body>
+  </table>
+
+  <h4>Have an idea for another word pair?
+  <%= link_to "Submit it here.", new_word_path %> </h4>
+
+
+
