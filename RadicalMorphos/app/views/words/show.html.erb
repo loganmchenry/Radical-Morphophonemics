@@ -1,10 +1,11 @@
-<h1>Detail View!</h1>
+<div>
+    <a href="/words"> <h1>Radical Morphophonemics</h1></a>
+<h3>Detail View</h3>
 
 <p><%= @wordPair.word1 %></p>
-<p>
-<a href='<%=@wordPair.pronunciation1URL%>'> <%= @wordPair.phonetic1 %> </a>
-</p>
+<p><%= @wordPair.phonetic1 %></p>
+<audio src='<%=@wordPair.pronunciation1URL%>' controls> </audio>
 <p><%= @wordPair.word2 %></p>
-<p>
-<a href='<%=@wordPair.pronunciation2URL%>'> <%= @wordPair.phonetic2 %> </a>
-</p>
+<p><%= @wordPair.phonetic2 %></p>
+<audio src='<%=@wordPair.pronunciation2URL%>' controls> </audio>
+<div>

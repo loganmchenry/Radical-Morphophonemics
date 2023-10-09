@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :words
   post "words/new" => "words#create"
 
+  get "about" => "about#index"
+  get "mutaphones" => "mutaphones#index"
 
  
 end
